@@ -1,6 +1,6 @@
 import logo from './logo.svg';
-import Header from './modules/header.js';
-import Footer from './modules/footer.js';
+import Header from './components/header.js';
+import Footer from './components/footer.js';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
