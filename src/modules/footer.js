@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 const Footer = () => {
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary" fixed="bottom">
+      <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Text>Copyright details here.</Navbar.Text>
         </Container>
