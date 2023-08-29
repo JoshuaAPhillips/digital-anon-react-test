@@ -7,13 +7,14 @@ import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Logo from '../resources/images/da-logo-test.png'
+import styles from './header.module.css'
 
 const Header = () => {
 
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary" sticky="top">
-        <Container>
+      <Navbar fluid expand="lg" className={styles.header} sticky="top">
+        <Container fluid>
           <Navbar.Brand href="#home">
               <img src={Logo} className="d-inline-block align-top" height="30"/> The Digital Anon
             </Navbar.Brand>
@@ -21,7 +22,12 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav navbarScroll className="me-auto">
               <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">The Documents</Nav.Link>
+              <NavDropdown title="The Documents">
+                <NavDropdown.Item href="#link">Facsimiles</NavDropdown.Item>
+                <NavDropdown.Item href="#link">Transcriptions</NavDropdown.Item>
+                <NavDropdown.Item href="#link">Anonapaedia</NavDropdown.Item>
+                <NavDropdown.Item href="#link">More...</NavDropdown.Item>
+              </NavDropdown>
               <NavDropdown title="About">
                 <NavDropdown.Item href="#link">About the Documents</NavDropdown.Item>
                 <NavDropdown.Item href="#link">About the Project</NavDropdown.Item>

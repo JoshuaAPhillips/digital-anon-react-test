@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Container style={{ height: "100vh" }}>
+      <Container fluid style={{ verticalAlign: "center", textAlign: "center", height: "85vh" }}>
         <h1 style={{ paddingTop: '2.0rem' }}>The Digital 'Anon'</h1>
         <h2>A Digital, Genetic Edition of Virginia Woolf's Final Essays</h2>
         <br />
@@ -16,6 +16,7 @@ function App() {
         <p style={{ fontSize: '1.5rem', fontWeight: 'bolder' }}>This site is under construction. Please check back later.</p>
       </Container>
       <Footer />
+
     </div>
   );
 }
