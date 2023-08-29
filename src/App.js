@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import Header from './components/header.js';
 import Footer from './components/footer.js';
+import Container from 'react-bootstrap/Container';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -8,20 +8,13 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container style={{ height: "100vh" }}>
+        <h1 style={{ paddingTop: '2.0rem' }}>The Digital 'Anon'</h1>
+        <h2>A Digital, Genetic Edition of Virginia Woolf's Final Essays</h2>
+        <br />
+        <p style={{ fontSize: '10.0rem' }}>🚧</p>
+        <p style={{ fontSize: '1.5rem', fontWeight: 'bolder' }}>This site is under construction. Please check back later.</p>
+      </Container>
       <Footer />
     </div>
   );
