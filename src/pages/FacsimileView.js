@@ -2,17 +2,14 @@ import Header from '../components/header.js';
 import Footer from '../components/footer.js';
 import Construction from '../components/Construction.js';
 import { useParams } from 'react-router-dom';
-import Construction from '../components/Construction.js'
 
-const DocumentView = () => {
+const FacsimileView = ( {page} ) => {
 
   return(
     <>
-      <Header />
-      <Construction />
-      <Footer />
+      <Construction page={"Facsimiles"}/>
     </>
   )
 }
 
-export default DocumentView
+export default FacsimileView
