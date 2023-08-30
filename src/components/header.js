@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -15,16 +17,18 @@ const Header = () => {
     <>
       <Navbar fluid expand="lg" className={styles.header} sticky="top">
         <Container fluid>
-          <Navbar.Brand href="#home">
-              <img src={Logo} className="d-inline-block align-top" height="30"/> The Digital Anon
+          <Navbar.Brand
+            as={Link} to="/" 
+            className={styles.brand}>
+              {/*<img src={Logo} className={styles.logo} height="30"/>*/} The Digital Anon
             </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav navbarScroll className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link as={Link} to="/">Home</Nav.Link>
               <NavDropdown title="The Documents">
-                <NavDropdown.Item href="#link">Facsimiles</NavDropdown.Item>
-                <NavDropdown.Item href="#link">Transcriptions</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/facsimiles">Facsimiles</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/transcriptions">Transcriptions</NavDropdown.Item>
                 <NavDropdown.Item href="#link">Anonapaedia</NavDropdown.Item>
                 <NavDropdown.Item href="#link">More...</NavDropdown.Item>
               </NavDropdown>
