@@ -14,7 +14,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/facsimiles" element={<FacsimileView />} />
-            <Route path="/transcriptions:transcriptionId" element={<TranscriptionView />} />
+            <Route path="/transcriptions" element={<TranscriptionView />} />
           </Route>
         </Routes>
       </BrowserRouter>
