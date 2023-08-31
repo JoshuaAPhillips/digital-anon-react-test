@@ -1,23 +1,29 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, BrowserRouter, Routes, Route, RouterProvider } from "react-router-dom";
 import Layout from './pages/Layout.js';
 import Home from './pages/Home.js';
 import FacsimileView from './pages/FacsimileView.js';
 import TranscriptionView from "./pages/TranscriptionView.js";
+import NotFound from './pages/NotFound.js';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    errorElement: <NotFound />,
+    children: [
+      { path: '/', element: <Home /> },
+      { path: '/facsimiles', element: <FacsimileView /> },
+      { path: '/transcriptions', element: <TranscriptionView /> }
+    ]
+  }
+]);
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/facsimiles" element={<FacsimileView />} />
-            <Route path="/transcriptions" element={<TranscriptionView />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={router} />
     </div>
   );
 }
