@@ -5,6 +5,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 
+import styles from './Subheader.module.css'
+
 const Subheader = ({ toggleSidebar }) => {
 
   const handleClick = () => {
@@ -14,7 +16,7 @@ const Subheader = ({ toggleSidebar }) => {
 
   return (
     <>
-      <Navbar fluid>
+      <Navbar fluid className={styles.navbar}>
         <Button onClick={handleClick}>View</Button>
       </Navbar>
     </>
