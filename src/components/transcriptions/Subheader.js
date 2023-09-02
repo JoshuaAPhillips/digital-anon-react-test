@@ -1,15 +1,36 @@
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
-import styles from './Subheader.module.css'
+import { Link } from 'react-router-dom';
 
-function OffcanvasExample() {
+function Subheader({ documentData }) {
+
+  // Routes to transcription pages
+
+  const notebookList = documentData.filter(document => document.category === 'notebook');
+  const anonList = documentData.filter(document => document.category === 'anon');
+  const m54List = documentData.filter(document => document.category === 'm54_subfragment');
+  const readerList = documentData.filter(document => document.category === 'reader');
+
+  const notebookRoutes = notebookList.map((document) => 
+    <NavDropdown.Item as={Link} key={document.id} to={`transcriptions/${document.id}`}>{document.title_short}</NavDropdown.Item>
+  );
+  const anonRoutes = anonList.map((document) => 
+    <NavDropdown.Item as={Link} key={document.id} to={`transcriptions/${document.id}`}>{document.title_short}</NavDropdown.Item>
+  );
+  const m54Routes = m54List.map((document) =>
+    <NavDropdown.Item as={Link} key={document.id} to={`transcriptions/${document.id}`}>{document.title_short}</NavDropdown.Item>
+  );
+
+  const readerRoutes = readerList.map((document) =>
+    <NavDropdown.Item as={Link} key={document.id} to={`transcriptions/${document.id}`}>{document.title_short}</NavDropdown.Item> 
+  );
+
   return (
     <>
       {[false].map((expand) => (
@@ -40,66 +61,26 @@ function OffcanvasExample() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
+                  
                   <NavDropdown title="Notebook Fragments" id={`offcanvasNavbarDropdown-expand-${expand}`}>
-                    <NavDropdown.Item href="#action1">M.1-8-1</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.1-8-2</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.1-8-3</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.1-8-4</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.1-8-5</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.1-8-6</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.1-8-7</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.1-8-8</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.1-8-9</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.1-8-10</NavDropdown.Item>
+                    {notebookRoutes}
                   </NavDropdown>
 
                   <NavDropdown
                     title="'Anon' Fragments"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}>
-                    <NavDropdown.Item href="#action1">M.45</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.46</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.47</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.48</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.49</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.50</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.51</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.52</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.53</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.54-1</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.54-2</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.54-3</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.54-4</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.54-5</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.54-6</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.54-7</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.54-8</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.54-9</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.54-10</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.54-11</NavDropdown.Item>
+                    {anonRoutes}
+                  </NavDropdown>
+
+                  <NavDropdown title="'M.54' Subfragments" id={`offcanvasNavbarDropdown-expand-${expand}`}>
+                    {m54Routes}
                   </NavDropdown>
 
                   <NavDropdown title="'The Reader' Fragments" id={`offcanvasNavbarDropdown-expand-${expand}`}>
-                    <NavDropdown.Item href="#action1">M.108</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.109</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.110</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.111-1</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.111-2</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.111-3</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.112-1</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.112-2</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.112-3</NavDropdown.Item>
-                    <NavDropdown.Item href="#action1">M.113</NavDropdown.Item>
+                    {readerRoutes}
                   </NavDropdown>
+
                 </Nav>
-                <Form className="d-flex">
-                  <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                  />
-                  <Button variant="outline-success">Search</Button>
-                </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
@@ -109,4 +90,4 @@ function OffcanvasExample() {
   );
 }
 
-export default OffcanvasExample;
+export default Subheader;
