@@ -79,6 +79,8 @@ function Subheader({ documentData }) {
                   <NavDropdown title="'The Reader' Fragments" id={`offcanvasNavbarDropdown-expand-${expand}`}>
                     {readerRoutes}
                   </NavDropdown>
+                  
+                  <Nav.Link as={Link} to="/transcriptions">Transcriptions Home</Nav.Link>
 
                 </Nav>
               </Offcanvas.Body>

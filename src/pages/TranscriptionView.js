@@ -9,6 +9,7 @@ import documentData from '../resources/data/document_data.js'
 
 const TranscriptionView = ({ page }) => {
 
+  const page_id = useParams()
 
   return (
     <>
