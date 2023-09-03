@@ -6,7 +6,10 @@ const FacsimileView = ({ page }) => {
 
   return(
     <>
-      <Construction page={"Facsimiles"}/>
+      <iframe 
+        src="https://joshuaaphillips.github.io/digital-anon/html/miradortest.html" 
+        style={{width: '100%', height: '85vh', border: 'none'}}
+      />
     </>
   )
 }
