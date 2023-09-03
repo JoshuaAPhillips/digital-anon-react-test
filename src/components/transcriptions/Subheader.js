@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -8,7 +10,23 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 import { Link } from 'react-router-dom';
 
+import TranscriptionViewer from './TranscriptionViewer'
+
 function Subheader({ documentData }) {
+
+    // State for annotation pane and transcription options
+
+    const [showAnnotations, setShowAnnotations] = useState(false);
+    const [showTypos, setShowTypos] = useState(false);
+    const [showAdditions, setShowAdditions] = useState(false);
+    const [showDeletions, setShowDeletions] = useState(false);
+  
+    // Functions for annotation pane
+  
+    const handleShowAnnotations = () => {
+      setShowAnnotations(!showAnnotations)
+      console.log('Opening annotations pane!')
+    }
 
   // Routes to transcription pages
 
@@ -40,12 +58,15 @@ function Subheader({ documentData }) {
             {/* hamburger menu button */}
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
 
-            {/* buttons */}
+            {/* option buttons */}
             <ButtonGroup>
               <Button variant='outline-danger'>Typos</Button>
               <Button variant='outline-success'>Additions</Button>
               <Button variant='outline-dark'><s>Deletions</s></Button>
-              <Button variant="outline-primary">Annotations</Button>
+              <Button variant='outline-primary'
+                onClick={handleShowAnnotations}
+                active={showAnnotations}
+              >Annotations</Button>
             </ButtonGroup>
 
             {/* offcanvas menu */}
@@ -88,6 +109,7 @@ function Subheader({ documentData }) {
           </Container>
         </Navbar>
       ))}
+      <TranscriptionViewer documentData={documentData} showAnnotations={showAnnotations} showTypos={showTypos} showAdditions={showAdditions} showDeletions={showDeletions} />
     </>
   );
 }

@@ -1,0 +1,23 @@
+.AnnotationPane {
+  background-color: rgb(248,249,250);
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
+  min-height: 100%;
+  width: 33%;
+}
+
+Container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.closed {
+  width: 0%;
+}
+
+.open {
+  width: auto;
+  transform: translateX(100%);
+}

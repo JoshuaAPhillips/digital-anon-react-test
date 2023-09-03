@@ -1,10 +1,17 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import NotFoundError from '../NotFoundError';
 import Construction from '../Construction';
+import AnnotationPane from './AnnotationPane';
 
-const TranscriptionViewer = ({ documentData }) => {
+//import styles from './TranscriptionViewer.module.css';
+
+const TranscriptionViewer = ({ documentData, showAnnotations, showTypos, showAdditions, showDeletions, showPane }) => {
   const { page_id } = useParams();
 
   const matchingPage = documentData.find((document) => document.id === page_id);
@@ -44,12 +51,17 @@ const TranscriptionViewer = ({ documentData }) => {
 
   return (
     <>
-      
-      <Container>
-        <p>{matchingPage.title_full}</p>
-        <div dangerouslySetInnerHTML={{ __html: pageContent }}></div>
-      </Container>
-      
+      <Row>
+        <Col xs={8}>
+          <Container>
+          <p>{matchingPage.title_full}</p>
+          <div dangerouslySetInnerHTML={{ __html: pageContent }}></div>
+          </Container>
+        </Col>
+        <Col xs={4}>
+          <AnnotationPane showAnnotations={showAnnotations}/>
+        </Col>
+      </Row>
     </>
   );
 };

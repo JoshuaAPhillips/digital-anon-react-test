@@ -14,7 +14,6 @@ const TranscriptionView = ({ page }) => {
   return (
     <>
       <Subheader documentData={documentData} />
-      <TranscriptionViewer documentData={documentData} />
     </>
   )
 }
