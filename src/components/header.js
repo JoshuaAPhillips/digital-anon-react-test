@@ -29,13 +29,13 @@ const Header = () => {
               <NavDropdown title="The Documents">
                 <NavDropdown.Item as={Link} to="/facsimiles">Facsimiles</NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/transcriptions">Transcriptions</NavDropdown.Item>
-                <NavDropdown.Item href="#link">Anonapaedia</NavDropdown.Item>
-                <NavDropdown.Item href="#link">More...</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/annotations">Anonapaedia</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/more-documents">More...</NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="About">
-                <NavDropdown.Item href="#link">About the Documents</NavDropdown.Item>
-                <NavDropdown.Item href="#link">About the Project</NavDropdown.Item>
-                <NavDropdown.Item href="#link">How-to</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/about-documents">About the Documents</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/about-digital-anon">About the Project</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/how-to">How-to</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

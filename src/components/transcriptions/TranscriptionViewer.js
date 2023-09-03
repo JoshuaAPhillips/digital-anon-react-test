@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
 import NotFoundError from '../NotFoundError';
 import Construction from '../Construction';
 
@@ -43,8 +44,12 @@ const TranscriptionViewer = ({ documentData }) => {
 
   return (
     <>
-      <p>{matchingPage.title_full}</p>
-      <div dangerouslySetInnerHTML={{ __html: pageContent }}></div>
+      
+      <Container>
+        <p>{matchingPage.title_full}</p>
+        <div dangerouslySetInnerHTML={{ __html: pageContent }}></div>
+      </Container>
+      
     </>
   );
 };
