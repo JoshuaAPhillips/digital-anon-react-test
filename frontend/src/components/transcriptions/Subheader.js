@@ -65,7 +65,7 @@ function Subheader({ documentData }) {
               <Button variant='outline-dark'><s>Deletions</s></Button>
               <Button variant='outline-primary'
                 onClick={handleShowAnnotations}
-                active={showAnnotations}
+                active={!showAnnotations}
               >Annotations</Button>
             </ButtonGroup>
 

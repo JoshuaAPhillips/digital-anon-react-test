@@ -46,6 +46,7 @@ const Header = () => {
                   type="text"
                   placeholder="search"
                   className="mr-sm-2"
+                  disabled
                 />
               </Col>
             </Row>
