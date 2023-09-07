@@ -15,3 +15,5 @@ app.use("/record", records);
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`);
 });
+
+app.get("/", (req, res) => res.send(`Hello World! This is your friendly local server. I am listening on port: ${PORT}`));

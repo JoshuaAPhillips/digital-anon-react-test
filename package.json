@@ -831,7 +831,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "(cd frontend && npm start) & (cd server && npm start)"
+    "start": "(cd frontend && npm start) & (cd server && npm run dev)"
   },
   "keywords": [],
   "author": "",
