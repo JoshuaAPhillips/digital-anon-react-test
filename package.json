@@ -831,7 +831,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "cd frontend && npm start && cd ../backend && nodemon server.js"
+    "start": "(cd frontend && npm start) & (cd server && npm start)"
   },
   "keywords": [],
   "author": "",
