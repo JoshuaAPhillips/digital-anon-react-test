@@ -6,4 +6,4 @@ const objectSchema = new Schema({
   //TODO: Define schema
 })
 
-export const Object = mongoose.model('Person', objectSchema)
+export const Object = mongoose.model('Object', objectSchema)

@@ -6,4 +6,4 @@ const artworkSchema = new Schema({
   //TODO: Define schema
 })
 
-export const Artwork = mongoose.model('Person', artworkSchema)
+export const Artwork = mongoose.model('Artwork', artworkSchema)
