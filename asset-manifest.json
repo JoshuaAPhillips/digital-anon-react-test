@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/digital-anon-react-test/static/css/main.f52f852f.css",
+    "main.js": "/digital-anon-react-test/static/js/main.e1d67505.js",
+    "static/js/787.97a1e3ac.chunk.js": "/digital-anon-react-test/static/js/787.97a1e3ac.chunk.js",
+    "static/media/da-logo-test.png": "/digital-anon-react-test/static/media/da-logo-test.0f1c272b578092251627.png",
+    "index.html": "/digital-anon-react-test/index.html",
+    "main.f52f852f.css.map": "/digital-anon-react-test/static/css/main.f52f852f.css.map",
+    "main.e1d67505.js.map": "/digital-anon-react-test/static/js/main.e1d67505.js.map",
+    "787.97a1e3ac.chunk.js.map": "/digital-anon-react-test/static/js/787.97a1e3ac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f52f852f.css",
+    "static/js/main.e1d67505.js"
+  ]
+}
