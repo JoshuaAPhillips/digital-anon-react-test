@@ -1,0 +1,19 @@
+
+.Container {
+  vertical-align: middle;
+  text-align: center;
+  min-height: 80vh;
+  padding-top: 6.0rem;
+}
+
+h1 {
+  padding-top: 2.0rem;
+}
+
+.emoji {
+  font-size: 10.0rem;
+}
+
+p {
+  font-size: 1.5rem;
+}

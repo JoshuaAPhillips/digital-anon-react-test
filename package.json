@@ -1,6 +1,7 @@
 {
   "name": "digital-anon-react-test",
   "version": "1.0.0",
+  "homepage": "https://joshuaaphillips.github.io/digital-anon-react-test/",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "dependencies": {
@@ -831,9 +832,27 @@
     "yocto-queue": "^0.1.0"
   },
   "scripts": {
-    "start": "(cd frontend && npm start) & (cd server && npm run dev)"
+    "start": "(cd frontend && npm start) & (cd server && npm run dev)",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

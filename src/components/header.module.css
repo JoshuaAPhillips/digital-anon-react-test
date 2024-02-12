@@ -1,0 +1,10 @@
+.header {
+  background-color: white;
+  border-bottom: #f8f9fa 1px solid;
+  width: 100%;
+  z-index: 100;
+}
+
+.brand {
+  font-weight: bold;
+}
