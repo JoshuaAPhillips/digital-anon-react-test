@@ -26,7 +26,7 @@ const transcriptionRoutes = documentData.map((document) => ({
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    //path: '/',
     element: <Layout />,
     errorElement: <NotFound />,
     children: [
