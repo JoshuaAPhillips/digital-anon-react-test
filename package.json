@@ -1,7 +1,7 @@
 {
   "name": "digital-anon-react-test",
   "version": "1.0.0",
-  "homepage": "https://joshuaaphillips.github.io/digital-anon-react-test/",
+  "homepage": "https://joshuaaphillips.github.io/digital-anon-react-test",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "dependencies": {
