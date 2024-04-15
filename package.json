@@ -462,6 +462,7 @@
     "minimalistic-assert": "^1.0.1",
     "minimatch": "^3.1.2",
     "minimist": "^1.2.8",
+    "mirador": "^4.0.0-alpha.2",
     "mkdirp": "^0.5.6",
     "ms": "^2.1.2",
     "multicast-dns": "^7.2.5",

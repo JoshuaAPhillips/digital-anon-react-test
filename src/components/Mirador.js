@@ -1,25 +1,32 @@
-{/*
-import Mirador from 'mirador/dist/es/src/index';
+import React, { Component } from "react";
+import mirador from "mirador";
 
-const miradorConfig = {
-  id: 'mirador-viewer',
-  windows: [
-    {
-      manifestId: 'https://raw.githubusercontent.com/JoshuaAPhillips/digital-anon/main/manifests/m1-8-2-manifest.json'
+const loadedManifests = [
+  {
+    manifestId: "https://raw.githubusercontent.com/JoshuaAPhillips/digital-anon/main/manifests/m1-8-1-manifest.json",
+    provider: "NYPL"
+  }
+]
+
+class Mirador extends Component {
+  componentDidMount() {
+    const config = {
+      id: "mirador",
+      catalog: [
+        {
+          loadedManifest: loadedManifests.manifestId
+        }
+      ]
     }
-  ]
+    const { plugins } = this.props;
+    mirador.viewer(config, plugins);
+  }
+
+  render() {
+    const { config } = this.props;
+    return <div 
+      id={config.id} />;
+  }
 }
 
-const miradorPlugins = []
-
-const MiradorViewer = ({ miradorConfig, miradorPlugins }) => {
-  return (
-    <div>
-      <Mirador config={miradorConfig} />
-    </div>
-  )
-}
-
-export default MiradorViewer
-
-*/}
+export default Mirador
