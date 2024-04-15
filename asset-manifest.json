@@ -1,16 +1,31 @@
 {
   "files": {
     "main.css": "/digital-anon-react-test/static/css/main.f52f852f.css",
-    "main.js": "/digital-anon-react-test/static/js/main.e1d67505.js",
+    "main.js": "/digital-anon-react-test/static/js/main.eb70cace.js",
+    "static/js/142.5730d6cd.chunk.js": "/digital-anon-react-test/static/js/142.5730d6cd.chunk.js",
     "static/js/787.97a1e3ac.chunk.js": "/digital-anon-react-test/static/js/787.97a1e3ac.chunk.js",
+    "static/js/86.b2933d47.chunk.js": "/digital-anon-react-test/static/js/86.b2933d47.chunk.js",
+    "static/js/345.1a7328a8.chunk.js": "/digital-anon-react-test/static/js/345.1a7328a8.chunk.js",
+    "static/js/249.1ac34f7b.chunk.js": "/digital-anon-react-test/static/js/249.1ac34f7b.chunk.js",
+    "static/js/159.56ed7d97.chunk.js": "/digital-anon-react-test/static/js/159.56ed7d97.chunk.js",
+    "static/js/492.e1c9eb75.chunk.js": "/digital-anon-react-test/static/js/492.e1c9eb75.chunk.js",
+    "static/js/250.57266f94.chunk.js": "/digital-anon-react-test/static/js/250.57266f94.chunk.js",
     "static/media/da-logo-test.png": "/digital-anon-react-test/static/media/da-logo-test.0f1c272b578092251627.png",
+    "static/media/reselect.cjs": "/digital-anon-react-test/static/media/reselect.e8c09fffdd40f8567932.cjs",
     "index.html": "/digital-anon-react-test/index.html",
     "main.f52f852f.css.map": "/digital-anon-react-test/static/css/main.f52f852f.css.map",
-    "main.e1d67505.js.map": "/digital-anon-react-test/static/js/main.e1d67505.js.map",
-    "787.97a1e3ac.chunk.js.map": "/digital-anon-react-test/static/js/787.97a1e3ac.chunk.js.map"
+    "main.eb70cace.js.map": "/digital-anon-react-test/static/js/main.eb70cace.js.map",
+    "142.5730d6cd.chunk.js.map": "/digital-anon-react-test/static/js/142.5730d6cd.chunk.js.map",
+    "787.97a1e3ac.chunk.js.map": "/digital-anon-react-test/static/js/787.97a1e3ac.chunk.js.map",
+    "86.b2933d47.chunk.js.map": "/digital-anon-react-test/static/js/86.b2933d47.chunk.js.map",
+    "345.1a7328a8.chunk.js.map": "/digital-anon-react-test/static/js/345.1a7328a8.chunk.js.map",
+    "249.1ac34f7b.chunk.js.map": "/digital-anon-react-test/static/js/249.1ac34f7b.chunk.js.map",
+    "159.56ed7d97.chunk.js.map": "/digital-anon-react-test/static/js/159.56ed7d97.chunk.js.map",
+    "492.e1c9eb75.chunk.js.map": "/digital-anon-react-test/static/js/492.e1c9eb75.chunk.js.map",
+    "250.57266f94.chunk.js.map": "/digital-anon-react-test/static/js/250.57266f94.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f52f852f.css",
-    "static/js/main.e1d67505.js"
+    "static/js/main.eb70cace.js"
   ]
 }
